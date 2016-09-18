@@ -1,4 +1,4 @@
-<?php namespace PaypalIPN;
+<?php namespace overint\PaypalIPN;
 
 class PaypalIPN
 {

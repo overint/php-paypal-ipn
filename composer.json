@@ -13,7 +13,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "PaypalIPN\\": "src"
+            "overint\\PaypalIPN\\": "src"
         }
     }
 }
