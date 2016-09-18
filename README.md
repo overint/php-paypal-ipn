@@ -2,6 +2,10 @@
 PHP Class for verifying PayPal Instant Payment Notification (IPN) messages.  
 Use the `PaypalIPN` class in your project to handle the encoding of POST data, post back to PayPal, and parsing of the response from PayPal.
 
+To install this package using composer:
+
+    composer require overint/php-paypal-ipn
+
 Example Use Case
 ---------
 
@@ -42,3 +46,4 @@ listener.
 Once you have your sandbox account setup, you simply create a PHP script that
 will be your IPN listener. In that script, use the `PaypalIPN` class as shown
 above in the example use case.
+
