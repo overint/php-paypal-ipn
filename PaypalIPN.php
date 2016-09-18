@@ -102,6 +102,14 @@ class PaypalIPN {
 		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
 		curl_setopt($ch, CURLOPT_HTTPHEADER, ['Connection: Close']);
 		$res = curl_exec($ch);
+        $info = curl_getinfo($ch);
+        $http_code = $info['http_code'];
+
+        if ($http_code != 200)
+        {
+            throw new Exception("PayPal responded with http code $http_code");
+        }
+
 		if (!($res)) {
             $errno = curl_errno($ch);
             $errstr = curl_error($ch);
