@@ -1,0 +1,14 @@
+{
+    "name": "overint/php-paypal-ipn",
+    "description": "PHP Class for verifying PayPal IPN messages",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "overint",
+            "email": "emcmahonzx@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
