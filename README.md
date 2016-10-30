@@ -9,7 +9,7 @@ To install this package using composer:
 Example Use Case
 ---------
 
-    use PaypalIPN;
+    use overint\PaypalIPN;
     
     $ipn = new PayPalIPN();
     $ipn->useSandbox();
