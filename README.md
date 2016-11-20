@@ -11,7 +11,7 @@ Example Use Case
 
     use overint\PaypalIPN;
     
-    $ipn = new PayPalIPN();
+    $ipn = new PaypalIPN();
     $ipn->useSandbox();
     $verified = $ipn->verifyIPN();
     if ($verified){
