@@ -1,4 +1,8 @@
-<?php namespace overint;
+<?php 
+
+namespace overint;
+
+use \Exception
 
 class PaypalIPN
 {
