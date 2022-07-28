@@ -112,7 +112,10 @@ class PaypalIPN
         }
         curl_setopt($ch, CURLOPT_FORBID_REUSE, 1);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, ['Connection: Close']);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'User-Agent: PHP-IPN-Verification-Script',
+            'Connection: Close',
+        ));
         $res = curl_exec($ch);
         $info = curl_getinfo($ch);
         $http_code = $info['http_code'];
