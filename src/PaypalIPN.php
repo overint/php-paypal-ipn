@@ -4,8 +4,8 @@ namespace overint;
 
 use \Exception;
 
-class PaypalIPN
-{
+class PaypalIPN {
+
     /** @var bool $useSandbox Indicates if the sandbox endpoint is used. */
     private $useSandbox = false;
     /** @var bool $useLocalCerts Indicates if the local certificates are used. */
@@ -28,8 +28,7 @@ class PaypalIPN
      * should not be enabled in production).
      * @return void
      */
-    public function useSandbox()
-    {
+    public function useSandbox() {
         $this->useSandbox = true;
     }
 
@@ -38,8 +37,7 @@ class PaypalIPN
      * environments).
      * @return void
      */
-    public function usePHPCerts()
-    {
+    public function usePHPCerts() {
         $this->useLocalCerts = false;
     }
 
@@ -48,8 +46,7 @@ class PaypalIPN
      * Determine endpoint to post the verification data to.
      * @return string
      */
-    public function getPaypalUri()
-    {
+    public function getPaypalUri() {
         if ($this->useSandbox) {
             return self::SANDBOX_VERIFY_URI;
         } else {
@@ -65,8 +62,7 @@ class PaypalIPN
      * @return bool
      * @throws Exception
      */
-    function verifyIPN()
-    {
+    public function verifyIPN() {
         if (!count($_POST)) {
             throw new Exception("Missing POST Data");
         }
@@ -135,4 +131,3 @@ class PaypalIPN
         }
     }
 }
-
