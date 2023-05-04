@@ -2,7 +2,7 @@
 
 namespace overint;
 
-use \Exception;
+use Exception;
 
 class PaypalIPN
 {
